@@ -1,0 +1,303 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;*/
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.nav__bar{
+    background-color: #2E323F;
+    min-height: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+}
+
+.nav__bar > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__menu{
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: fixed;
+    top: 20px;
+    left: -100%;
+    transition: all  0.3s ease-in-out;
+}
+
+.nav__item{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.nav__link{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav__button{
+    background-color: #A59678;
+    padding: .3em 1.2em;
+    border-radius: 100px;
+    margin-top: 50px;
+    display: block;
+}
+
+.bar{
+    width: 25px;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: block;
+    margin: 3px auto;
+    transition: all .4s ease-in-out;
+}
+
+.hamburger{
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav__menu.active{
+    left: 0;
+    position: relative;
+}
+
+
+.spacer.active{
+    height: 300px;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1, h2, h3{
+    font-family: 'Oswald', sans-serif;
+}
+
+h3{
+    font-size: 20px;
+}
+
+header{
+    background-color: #3B4050;
+    padding: 5em 0;
+}
+
+.hero__title{
+    font-size: 35px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero__title__gold{
+    color: #A59678;
+}
+
+
+.hero__subtitle{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+.hero__button{
+    font-family: 'Oswald', sans-serif;
+    color:#FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5em 1.5em;
+    border-radius: 100px;
+    background-color:#A59678;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+section{
+    padding: 30px 0;
+}
+
+.section__one{
+    background-color: rgb(243, 238, 242);
+}
+
+.section__one h2{
+    color: #A59678;
+    font-size: 28px;
+}
+
+.section__two__title{
+    color: #A59678;
+    margin: 10px 0;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.img__container{
+    margin: 15px 0;
+}
+
+.side__content  div{
+    background-color: #3B4050;
+    color: #FFFFFF;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.footer{
+    background-color: #6F737F;
+    padding: 10px 0;
+}
+
+.footer__title{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.footer h3{
+    text-align: center;
+    color:#A59678;
+    font-size: 18px;
+}
+
+.footer ul{
+    margin: 15px 0;
+}
+
+.footer ul li{
+    list-style: none;
+    color: brown;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (min-width: 700px){
+
+
+    .section__one .container{
+        display: flex;
+    }
+
+    .img__container{
+        text-align: center;
+    }
+
+    .side__content {
+        display: flex;
+        gap: 10px;
+    }
+
+
+}
+
+
+@media (min-width: 1000px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        /*align-items: flex-start;*/
+    }
+    
+    .side__content{
+        display: block;
+    }
+
+    .img__container{
+        text-align: initial;
+    }
+
+    .nav__menu {
+        left: 0;
+        top: 0;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav__button{
+        margin-top: 0;
+    }
+
+    .nav__item{
+        margin: 0 10px;
+    }
+
+    .nav__link{
+        padding: .5em 2em;
+        transition: all .2s ease-in-out;
+        border-radius: 50px;
+    }
+
+    .nav__link:hover{
+        background-color: #FFFFFF;
+        color: #2E323F;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .header{
+        padding: 8em 0;
+    }
+
+    .hero__title{
+        font-size: 90px;
+    }
+
+    .hero_container{
+        align-self: flex-end;
+        margin-left: 20px;
+    }
+
+    .hero__subtitle{
+        font-size: 24px;
+    }
+    .hero__title__gold{
+        display: block;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+    h2{
+        font-size:  36px;
+    }
+}
+
+
