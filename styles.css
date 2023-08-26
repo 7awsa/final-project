@@ -15,7 +15,7 @@ body{
 .nav__bar{
     background-color: #2E323F;
     min-height: 20px;
-    padding: 10px 20px;
+    padding: 10px;
     width: 100%;
     position: fixed;
 }
@@ -24,6 +24,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.img_link{
+    display: block;
 }
 
 .nav__menu{
